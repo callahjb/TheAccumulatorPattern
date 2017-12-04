@@ -67,7 +67,7 @@ def summing_example(n):
     """
     total = 0  # Initialize to 0 BEFORE the loop
     for k in range(n):  # Loop
-        total = total + ((k + 1) ** 3)  # Accumulate INSIDE the loop.
+        total = total + ((k+1) ** 3)  # Accumulate INSIDE the loop.
 
     return total
 
