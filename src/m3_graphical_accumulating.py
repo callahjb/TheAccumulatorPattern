@@ -9,8 +9,8 @@ Additionally, it emphasizes that you must
 before you can implement a solution to the problem in Python.
 
 Authors: David Mutchler, Dave Fisher, Valerie Galluzzi, Amanda Stouder,
-         their colleagues and PUT_YOUR_NAME_HERE.
-"""  # TODO: 1. PUT YOUR NAME IN THE ABOVE LINE.
+         their colleagues and Joseph Callahan.
+"""  # done: 1. PUT YOUR NAME IN THE ABOVE LINE.
 
 import rosegraphics as rg
 
@@ -109,6 +109,18 @@ def draw_parallel_lines(n, point, length, window):
     #          ** FIRST DO A CONCRETE EXAMPLE BY HAND! **
     ####################################################################
     # ------------------------------------------------------------------
+    # draw_parallel_lines(n, point, length, window):
+
+    for k in range(n):
+        if k == 0:
+            endpt = rg.Point(point.x + length, point.y)
+            drawline = rg.Line(point,endpt)
+        else:
+            drawline = rg.Line(rg.Point(point.x,point.y + 30),rg.Point(point.x+length,point.y+30))
+
+    window.render()
+    drawline.attach_to(window)
+
 
 
 def run_test_draw_lines():
